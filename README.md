@@ -25,7 +25,7 @@ An end-to-end **Inventory Manager** web application built with the **MERN stack*
 | Frontend   | Next.js, Tailwind CSS, Redux Toolkit, RTK Query  |
 | Backend    | Express.js, MongoDB, Mongoose                    |
 | Auth       | JWT, bcrypt                                      |
-| Deployment | netlify (Frontend), netlify (Backend)            |
+| Deployment | netlify (Frontend), render (Backend)             |
 | Optional   | Cloudinary, React Hook Form, Toast Notifications |
 
 ---
@@ -88,20 +88,26 @@ NEXT_PUBLIC_API_BASE=http://localhost:5000/api
 npm run dev
 ```
 
-##📸 Screenshots
+## 📸 Screenshots
 
     ✨ Login Page
 
+![](https://i.postimg.cc/02QNZjMV/login.png)
+
     📦 Product Dashboard
+
+![](https://i.postimg.cc/QdKdGzq5/product.png)
 
     📝 Add/Edit Product Forms
 
-##🌐 Live Demo
+![](https://i.postimg.cc/tg9wtZ7T/product-from.png)
 
-    [🔗 Frontend URL](http://localhost:3000)
-    [🔗 Backend API](http://localhost:5000)
+## 🌐 Live Demo
 
-##🙌 Author
+🔗 [Frontend URL](https://inventory-manager.netlify.app)
+🔗 [Backend API](https://inventory-manager-7tcn.onrender.com)
 
-    [🔗 Portfolio](https://www.sabbirhossain.dev/)
-    [🔗 GitHub](https://github.com/sabbirhossainc)
+## 🙌 Author
+
+🔗 [Portfolio](https://www.sabbirhossain.dev/)
+🔗 [GitHub](https://github.com/sabbirhossainc)

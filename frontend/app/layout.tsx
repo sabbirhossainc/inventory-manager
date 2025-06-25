@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
+import NextTopLoader from "nextjs-toploader";
+import AppWrapper from "./AppWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Inventory Manager",
-  description: "Inventory management",
+  description: "Track and manage inventory like a pro!",
 };
 
 export default function RootLayout({
@@ -25,9 +27,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-gray-50 text-gray-900 antialiased`}
       >
-        {children}
+        <NextTopLoader
+          color="#29D"
+          initialPosition={0.08}
+          crawlSpeed={200}
+          height={3}
+          crawl={true}
+          showSpinner={false}
+          easing="ease"
+          speed={200}
+        />
+
+        <AppWrapper>{children}</AppWrapper>
       </body>
     </html>
   );

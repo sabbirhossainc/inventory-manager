@@ -25,13 +25,12 @@ This is the **Express.js** and **MongoDB** backend for the Inventory Manager app
 
 ## 📁 Project Structure
 
-backend/
-├── models/ # Mongoose schemas (User, Product)
-├── routes/ # API routes
-├── controllers/ # (optional: logic separation)
-├── middleware/ # JWT auth middleware
-├── server.js # Entry point
-├── .env # Environment variables
+      backend/
+      ├── models/ # Mongoose schemas (User, Product)
+      ├── routes/ # API routes
+      ├── middleware/ # JWT auth middleware
+      ├── server.js # Entry point
+      ├── .env # Environment variables
 
 ---
 
@@ -40,44 +39,47 @@ backend/
 1. **Clone the project**
 
 ```bash
-git clone <your-repo-url>
-cd backend
+    git clone https://github.com/sabbirhossainc/inventory-manager.git
+    cd backend
 ```
+
 2. **Install dependencies**
 
 ```bash
-npm install
+    npm install
 ```
+
 3. **Set up environment variables**
 
 - Create a .env file:
 
 ```bash
-PORT=5000
-MONGO_URI='mongodb+srv://sabbir_inventory:mADOlMLOskRektvq@inventorycluster0.ppfk6vj.mongodb.net/?retryWrites=true&w=majority&appName=inventoryCluster0'
-JWT_SECRET='02a248d30f34db1ec4bdb57799e86d20d85613155fb7b7cd210e3331c0701f850baa610ea8096cadb78ad6bb877cd3d300194dfaaef479a9a8108168e15aaa41'
+    PORT=5000
+    MONGO_URI='mongodb+srv://sabbir_inventory:mADOlMLOskRektvq@inventorycluster0.ppfk6vj.mongodb.net/?retryWrites=true&w=majority&appName=inventoryCluster0'
+    JWT_SECRET='02a248d30f34db1ec4bdb57799e86d20d85613155fb7b7cd210e3331c0701f850baa610ea8096cadb78ad6bb877cd3d300194dfaaef479a9a8108168e15aaa41'
 ```
-   - Run the server in Development:
+
+- Run the server in Development:
 
 ```bash
 npm run dev
 ```
 
-#🔌 API Endpoints
+# 🔌 API Endpoints
 
-##🔐 Auth
+## 🔐 Auth
 
 | Method | Route                | Description       |
 | ------ | -------------------- | ----------------- |
 | POST   | `/api/auth/register` | Register user     |
 | POST   | `/api/auth/login`    | Login & get token |
 
+## 📦 Products (Protected)
 
-##📦 Products (Protected)
-
-| Method | Route               | Description      |
-| ------ | ------------------- | ---------------- |
-| GET    | `/api/products`     | Get all products |
-| POST   | `/api/products`     | Add new product  |
-| PUT    | `/api/products/:id` | Update a product |
-| DELETE | `/api/products/:id` | Delete a product |
+| Method | Route               | Description          |
+| ------ | ------------------- | -------------------- |
+| GET    | `/api/products`     | Get all products     |
+| GET    | `/api/products/:id` | Get a single product |
+| POST   | `/api/products`     | Add new product      |
+| PUT    | `/api/products/:id` | Update a product     |
+| DELETE | `/api/products/:id` | Delete a product     |

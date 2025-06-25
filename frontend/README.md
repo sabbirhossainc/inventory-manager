@@ -8,7 +8,7 @@ This is the **Next.js** frontend for the Inventory Manager full-stack app.
 - Redux Toolkit + RTK Query
 - Protected product management pages
 - Tailwind CSS for styling
-- React Hook Form & toast notifications (optional)
+- React Hook Form & toast notifications
 
 ---
 
@@ -26,7 +26,7 @@ This is the **Next.js** frontend for the Inventory Manager full-stack app.
 
 ```bash
 frontend/
-├── app/ or pages/ # Routes
+├── app/ # Routes
 ├── redux/ # Store, slices, RTK API
 ├── components/ # Shared UI
 ├── styles/ # Tailwind & globals
@@ -63,7 +63,7 @@ NEXT_PUBLIC_API_BASE=http://localhost:5000/api
 npm run dev
 ```
 
-##📄 Available Pages
+## 📄 Available Pages
 
 ```bash
 Route	Description
@@ -75,7 +75,7 @@ Route	Description
 
 ```
 
-##🔒 Authentication
+## 🔒 Authentication
 
     JWT stored in Redux
 
@@ -83,11 +83,11 @@ Route	Description
 
     Redirect if user is not authenticated
 
-##🧪 Bonus
+## 🧪 Bonus
 
     ✅ Cloudinary image upload
 
-    ✅ React Toastify for alerts
+    ✅ React-hot-toast for alerts
 
     ✅ Search / Filter / Pagination
 

@@ -4,12 +4,27 @@ export const productApi = createApi({
   reducerPath: "productApi",
   baseQuery: fetchBaseQuery({
     baseUrl: process.env.NEXT_PUBLIC_API_BASE + "/products",
+    prepareHeaders: async (headers, { getState }) => {
+      const state = getState();
+
+      const token = state?.auth?.token || undefined;
+
+      if (token) {
+        headers.set("Authorization", `Bearer ${token}`);
+      }
+
+      return headers;
+    },
   }),
   tagTypes: ["Product"],
   endpoints: (builder) => ({
     getProducts: builder.query({
       query: () => "/",
       providesTags: ["Product"],
+    }),
+    getProductById: builder.query({
+      query: (id) => `/${id}`,
+      providesTags: (id) => [{ type: "Product", id }],
     }),
     createProduct: builder.mutation({
       query: (body) => ({ url: "/", method: "POST", body }),
@@ -32,6 +47,7 @@ export const productApi = createApi({
 
 export const {
   useGetProductsQuery,
+  useGetProductByIdQuery,
   useCreateProductMutation,
   useUpdateProductMutation,
   useDeleteProductMutation,
