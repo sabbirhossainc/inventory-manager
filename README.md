@@ -104,10 +104,9 @@ npm run dev
 
 ## 🌐 Live Demo
 
-🔗 [Frontend URL](https://inventory-manager.netlify.app)
+🔗 [Frontend URL](https://demo-inventory-manage.netlify.app/)
 🔗 [Backend API](https://inventory-manager-7tcn.onrender.com)
 
 ## 🙌 Author
 
 🔗 [Portfolio](https://www.sabbirhossain.dev/)
-🔗 [GitHub](https://github.com/sabbirhossainc)
