@@ -28,15 +28,17 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="flex justify-center w-full sm:w-1/2">
-          <input
-            type="text"
-            placeholder="Search products..."
-            value={searchTerm}
-            onChange={(e) => dispatch(setSearchTerm(e.target.value))}
-            className="px-3 py-1 rounded-md text-(--color-forground) border border-(--color-forground) focus:outline-1 focus:-outline-offset-2 focus:outline-blue-600 w-full max-w-sm"
-          />
-        </div>
+        {token && (
+          <div className="flex justify-center w-full sm:w-1/2">
+            <input
+              type="text"
+              placeholder="Search products..."
+              value={searchTerm}
+              onChange={(e) => dispatch(setSearchTerm(e.target.value))}
+              className="px-3 py-1 rounded-md text-(--color-forground) border border-(--color-forground) focus:outline-1 focus:-outline-offset-2 focus:outline-blue-600 w-full max-w-sm"
+            />
+          </div>
+        )}
 
         <div className="flex justify-end items-center gap-x-4">
           {!token ? (
