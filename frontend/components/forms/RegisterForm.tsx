@@ -24,10 +24,12 @@ export default function RegisterForm() {
           body: JSON.stringify(data),
         }
       );
-      if (!res.ok) throw new Error("Registration failed");
+      const result = await res.json();
+      if (!res.ok) throw new Error(result.msg || "Registration failed");
       toast.success("Registration successful!");
       router.push("/login");
     } catch (err: unknown) {
+      console.log("🚀 ~ onSubmit ~ err:", err)
       const e = err as ApiError;
       toast.error(e.message || "Something went wrong");
       console.error("Auth ~ err:", e);
