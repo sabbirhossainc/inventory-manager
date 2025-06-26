@@ -82,6 +82,34 @@ npm install
 NEXT_PUBLIC_API_BASE=http://localhost:5000/api
 ```
 
+## 🧪 Test Credentials
+
+**Email**: test@example.com  
+**Password**: 123456
+
+## 🔑 Login
+
+```bash
+POST /api/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "123456"
+}
+```
+
+## 🔐 Register a New User
+
+```bash
+POST /api/auth/register
+{
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "123456"
+}
+```
+
 - Run the frontend:
 
 ```bash

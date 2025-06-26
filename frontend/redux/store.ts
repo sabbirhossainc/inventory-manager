@@ -3,10 +3,12 @@ import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // uses localStorage
 
 import authReducer from "./slices/authSlice";
+import productReducer from "./slices/filterSlice";
 import { productApi } from "./api/productApi";
 
 const rootReducer = combineReducers({
   auth: authReducer,
+  filter: productReducer,
   [productApi.reducerPath]: productApi.reducer,
 });
 
